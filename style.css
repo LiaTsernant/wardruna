@@ -18,6 +18,12 @@ body {
   z-index: -999;
 } */
 
+#particles-js {
+  width: 100%;
+  height: 100%;
+  animation: move-particles 3s linear;
+}
+
 body, #container {
   display: flex;
   justify-content: center;
@@ -34,7 +40,7 @@ body {
   /* height: 730px; */
   align-items: flex-start;
   position: absolute;
-  animation: line-animation 5s ease-in-out
+  animation: line-animation 5s ease-in-out;
 }
 
 #center {
@@ -42,7 +48,7 @@ body {
   height: 720px;
   border-radius: 50px;
   background-color: white;
-  animation: line-glow 5s linear;
+  /* animation: line-glow 5s linear infinite; */
 }
 
 #right {
@@ -147,22 +153,23 @@ body {
 @keyframes line-animation {
   from {
     transform: scale(100);
-    /* background-color: #222; */
+    opacity: 0;
   }
 
   to {
     transform: scale(1);
-    /* background-color: white; */
+    opacity: 1;
   }
 }
-
-@keyframes line-glow {
+/* 
+@keyframes move-particles {
   from {
-    box-shadow: 4px 4px 4px 4px #fff;
+    width: 0;
+    height: 0;
   }
 
   to {
-        box-shadow: 4px 4px 4px 4px #fff;
-
+    width: 100%;
+    height: 100%;
   }
-}
+} */
