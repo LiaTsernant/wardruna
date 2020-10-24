@@ -2,26 +2,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* animation: line-animation 5s linear; */
 }
 
 html, 
 body {
   width: 100%;
   height: 100%;
-}
-
-/* img {
-  height: 100%;
-  object-fit: contain;
-  position: fixed;
-  z-index: -999;
-} */
-
-#particles-js {
-  width: 100%;
-  height: 100%;
-  animation: move-particles 3s linear;
 }
 
 body, #container {
@@ -36,140 +22,70 @@ body {
   overflow: hidden;
 }
 
+#forest {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.2;
+  filter: grayscale(100%);
+}
+
+#wardruna {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  filter: grayscale(100%);
+}
+
+#raven {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  animation: raven-path 15s linear;
+  opacity: 0;
+}
+
+.stop-color--1 {
+  stop-color: #c0c0c0;
+}
+
+.stop-color--2 {
+  stop-color: #f6f6f6;
+}
+
+.stop-color--1 {
+  stop-color: #c0c0c0;
+}
+
 #container {
-  /* height: 730px; */
+  width: 100%;
+  height: 100%;
   align-items: flex-start;
   position: absolute;
-  animation: line-animation 5s ease-in-out;
 }
 
-#center {
-  width: 20px;
-  height: 720px;
-  border-radius: 50px;
-  background-color: white;
-  /* animation: line-glow 5s linear infinite; */
-}
-
-#right {
-  transform: scaleX(-1);
-}
-
-.one {
-  width: 20px;
-  height: 110px;
-  border-radius: 50px;
-  background-color: white;
-  rotate: 43deg;
-  position: absolute;
-  left: -33px;
-  top: -10px;
-  /* animation: line-animation 5s linear; */
-}
-
-.two {
-  width: 20px;
-  height: 110px;
-  border-radius: 50px;
-  background-color: white;
-  rotate: 46deg;
-  position: absolute;
-  left: -33px;
-  top: 110px;
-  /* animation: line-animation 5s linear; */
-}
-
-.three {
-  width: 20px;
-  height: 330px;
-  border-radius: 50px;
-  background-color: white;
-  rotate: 44deg;
-  position: absolute;
-  left: -112px;
-  top: 220px;
-  /* animation: line-animation 5s linear; */
-}
-
-.four {
-  width: 20px;
-  height: 110px;
-  border-radius: 50px;
-  background-color: white;
-  rotate: 44deg;
-  position: absolute;
-  left: -35px;
-  top: 500px;
-  /* animation: line-animation 5s linear; */
-}
-
-.five {
-  width: 20px;
-  height: 330px;
-  border-radius: 50px;
-  background-color: white;
-  rotate: -42deg;
-  position: absolute;
-  left: -35px;
-  top: 225px;
-  /* animation: line-animation 5s linear; */
-}
-
-.six {
-  width: 20px;
-  height: 290px;
-  border-radius: 50px;
-  background-color: white;
-  position: absolute;
-  left: -140px;
-  top: 265px;
-  /* animation: line-animation 5s linear; */
-}
-
-.seven {
-  width: 20px;
-  height: 100px;
-  border-radius: 50px;
-  background-color: white;
-  position: absolute;
-  left: -175px;
-  top: 250px;
-  rotate: 55deg;
-  /* animation: line-animation 5s linear; */
-}
-
-.eight {
-  width: 20px;
-  height: 110px;
-  border-radius: 50px;
-  background-color: white;
-  position: absolute;
-  left: -210px;
-  top: 315px;
-  /* animation: line-animation 5s linear; */
-
+path {
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-miterlimit: 3.7;
 }
 
 @keyframes line-animation {
-  from {
-    transform: scale(100);
-    opacity: 0;
-  }
-
   to {
-    transform: scale(1);
-    opacity: 1;
+    stroke-dashoffset: 0;
   }
 }
-/* 
-@keyframes move-particles {
-  from {
-    width: 0;
-    height: 0;
+
+@keyframes raven-path {
+  0% { 
+    left: -500px;
+    top: 200px;
+    opacity: 0.8;
   }
 
-  to {
-    width: 100%;
-    height: 100%;
+  100% {
+    top: -100px;
+    left: 2000px;
+    opacity: 0.8;
   }
-} */
+}

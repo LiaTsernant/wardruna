@@ -7,34 +7,47 @@
   <title>Wardruna</title>
 </head>
 <body>
-  <div id="particles-js"></div>
-  <div id="container">
-    <div id="left">
-      <div class="one"></div>
-      <div class="two"></div>
-      <div class="three"></div>
-      <div class="four"></div>
-      <div class="five"></div>
-      <div class="six"></div>
-      <div class="seven"></div>
-      <div class="eight"></div>
-      <div class="nine"></div>
-      <div class="ten"></div>
-    </div>
-    <div id="center"></div>
-    <div id="right">
-      <div class="one"></div>
-      <div class="two"></div>
-      <div class="three"></div>
-      <div class="four"></div>
-      <div class="five"></div>
-      <div class="six"></div>
-      <div class="seven"></div>
-      <div class="eight"></div>
-    </div>
-  </div>
+  <img src="./forest-792808_1920.jpg" alt="forest background" id="forest">
+    <!-- <img src="./forest-1743206_1920.jpg" alt="forest background" id="forest"> -->
 
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <div id="container">
+    <svg viewBox="0 0 280 280" id="raven">
+      <defs>
+        <mask id="mask" maskunits="userSpaceOnUse" maskcontentunits="userSpaceOnUse">
+          <image xlink:href="https://img-fotki.yandex.ru/get/15520/5091629.a4/0_8d416_118079e_orig"></image>
+        </mask>
+    
+        <linearGradient id="gr-1" x1="0" y1="0" x2="100%" y2="100%">
+          <stop offset="15%" class="stop-color stop-color--1" />
+          <stop offset="45%" class="stop-color stop-color--2" />
+          <stop offset="55%" class="stop-color stop-color--2" />
+          <stop offset="96%" class="stop-color stop-color--3" />
+        </linearGradient>
+      </defs>
+    
+      <g mask="url(#mask)" class="g-container">
+        <rect fill="url(#gr-1)" width="100%" height="100%"></rect>
+        <rect fill="url(#gr-2)" width="100%" height="100%"></rect>
+      </g>
+    </svg>
+    <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#"
+      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg"
+      xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+      xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" id="wardruna"
+      viewBox="0 0 1920 914" sodipodi:docname="wardruna-logo.png.svg" inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)">
+      <path d="m 875,174 70,-80 70,80 -70,-80 z" id="path440" inkscape:connector-curvature="0" sodipodi:nodetypes="ccccc" />
+      <path d="M 945,99 V 809 Z" id="path442" inkscape:connector-curvature="0" sodipodi:nodetypes="ccc" />
+      <path d="m 875,289 70,-65 75,65 -75,-65 z" id="path444" inkscape:connector-curvature="0" sodipodi:nodetypes="ccccc" />
+      <path d="M 720,589 945,359 1170,589 945,359 Z" id="path446" inkscape:connector-curvature="0" sodipodi:nodetypes="ccccc" />
+      <!-- <path d="m 872,597 213,-228 65,45 v 95 -95 l -63,-47 z" id="path448" inkscape:connector-curvature="0" sodipodi:nodetypes="ccccccc" /> -->
+      <path d="m 872,597 213,-228 65,45 v 95 -95 l -65,-45 z" id="path448" inkscape:connector-curvature="0" sodipodi:nodetypes="ccccccc" />
+      <path d="M 1085,374 V 644 Z" id="path450" inkscape:connector-curvature="0" sodipodi:nodetypes="ccc" />
+      <path d="M 1017,597 807,367 737,412 v 95 -95 l 70,-45 z" id="path452" inkscape:connector-curvature="0" sodipodi:nodetypes="ccccccc" />
+      <path d="M 805,374 V 644 Z" id="path454" inkscape:connector-curvature="0" sodipodi:nodetypes="ccc" />
+      <path d="m 870,684 75,-70 70,70 -70,-70 z" id="path456" inkscape:connector-curvature="0" sodipodi:nodetypes="ccccc" />
+    </svg>
+  </div>
   <script src="./main.js"></script>
 </body>
 </html>
